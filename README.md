@@ -86,4 +86,4 @@ Here are some things we can improve on this app...
    * [Principle of Single Responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle)
    * [Angular Style Guide](https://github.com/den-wdi-1/angular-style-guide)
 * Use front-end routing with `ngRoute` where you don't want to refresh the page
-
+* Use factories or services where possible
