@@ -31,8 +31,9 @@ For reference, you can examine any of your labs from the Node week, but the [Per
 ### Step 2: $http / AJAX Connection to Back-End
 
 1. Use the following Heroku endpoint to replace your hard-coded Cards: https://shielded-forest-41789.herokuapp.com/api/flashcards
-2. Use `$http` to GET the flashcards
-3. Use `$http` to POST a new flashcard
+2. Use `$http` to GET the flashcards.
+3. Use `$http` to GET one flashcard by ID.
+4. Use `$http` to POST a new flashcard.
 
 For reference, you can examine your work in the [Criminals Lab](https://github.com/den-wdi-1/http-lab).
 
