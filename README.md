@@ -26,41 +26,51 @@ This lab is a chance to solidify what we learned earlier in the course about bac
 3. Look back at your back-end labs for reference on how to build this first directory.
 4. Serve up your front-end files from this server, preferably in a `public` directory.
 
+For reference, you can examine any of your labs from the Node week, but the [Personal API Lab](https://github.com/den-wdi-1/express-personal-api) may have the most complete code.
+
 ### Step 2: $http / AJAX Connection to Back-End
 
 1. Use the following Heroku endpoint to replace your hard-coded Cards: https://shielded-forest-41789.herokuapp.com/api/flashcards
-2. Use $http to GET the flashcards
-3. Use $http to POST a new flashcard
+2. Use `$http` to GET the flashcards
+3. Use `$http` to POST a new flashcard
+
+For reference, you can examine your work in the [Criminals Lab](https://github.com/den-wdi-1/http-lab).
 
 ### Step 3: Create Express Routes
 
 At this point, we still haven't built out our database, so hardcoding the data for your cards is expected.  However, you should be able to:
 
-1. Create a .get() (#index) route in Express that returns all of your hardcoded cards.
-2. Create a .get() (#show) route in Express that returns one of your hardcoded cards based on ID.
-3. Create a .post() (#create) route in Express that adds a hardcoded card to your array of hardcoded cards.
+1. Create a `.get()` (`#index`) route in Express that returns all of your hardcoded cards.
+2. Create a `.get()` (`#show`) route in Express that returns one of your hardcoded cards based on ID.
+3. Create a `.post()` (`#create`) route in Express that adds a hardcoded card to your array of hardcoded cards.
+
+For reference, you can examine your work in the [Express Routing Lab](https://github.com/den-wdi-1/express-routing-lab) or the [Express Personal API Lab](https://github.com/den-wdi-1/express-personal-api)
 
 ### Step 4: Integrate Mongo/Mongoose
 
 Now, we're going to set up our database.  Match up your Express routes with Mongoose methods so you can:
 
-1. Return all your cards.
-2. Return a single card based on ID.
-3. Save a single card to your database.
+1. `.find()` all your cards.
+2. `.find()` a single card based on ID.
+3. `.create()` or `.save()` a single card in your database.
+
+For reference, you can examine your work on the [Mongoose Books App](https://github.com/den-wdi-1/mongoose-books-app) 
 
 ### Step 5: CRUD All the Things!
 
-OK, now we can GET and POST, but that's not very helpful for the user looking to create a *new* card, *update* a card, or *delete* one.  Let's build out that functionality:
+OK, now we can GET and POST, but that's not very helpful for a user that is looking to *create* a *new* card, *update* a card, or *delete* one.  Let's build out that functionality:
 
-1. Build an HTML form that will allow us to submit a new card with our new POST method.  Since this is Angular, you will probably want to use `ng-submit`.  For help on this, you can look at the [Criminals Lab](https://github.com/den-wdi-1/http-lab).
+1. Build an HTML form that will allow us to submit a new card through our new POST route.  Since this is Angular, you will probably want to use `ng-submit`.  For help on this, you can look at the [Criminals Lab](https://github.com/den-wdi-1/http-lab).
 2. Add a button on each card that allows you to DELETE a card.  Again, the Criminals Lab should be helpful.
-3. Use a form that lets you edit and UPDATE a card.
+3. Use a form that lets you edit and UPDATE a card.  Try to borrow as much as you can from your work with the form from #1.
 
 ### Step 6: Looking Good
 
 First, step back and appreciate the work you've just done.  You just built out a back-end for your app without any starter code!
 
 Pretty cool, right?!
+
+![](http://i.imgur.com/M1nEp7h.gif)
 
 Now, how can we make this app better?
 
