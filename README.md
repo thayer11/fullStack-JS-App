@@ -24,6 +24,7 @@ This lab is a chance to solidify what we learned earlier in the course about bac
 1. Create a directory for your node server.
 2. Create a JS file that will act as your server file.
 3. Look back at your back-end labs for reference on how to build this first directory.
+4. Serve up your front-end files from this server, preferably in a `public` directory.
 
 ### Step 2: $http / AJAX Connection to Back-End
 
@@ -31,33 +32,47 @@ This lab is a chance to solidify what we learned earlier in the course about bac
 2. Use $http to GET the flashcards
 3. Use $http to POST a new flashcard
 
-### Step 3: User Input
+### Step 3: Create Express Routes
 
-* autofocus to the input field
-* use `ng-model` to track the input field's value
-* use `ng-change` to call a function when the input changes and pass in the input's value
-  * write a helper function in your controller that is passed into the view, i.e. `guessLetter`.
-  * the input should be cleared after each character is typed
+At this point, we still haven't built out our database, so hardcoding the data for your cards is expected.  However, you should be able to:
 
-### Step 4: Win State
+1. Create a .get() (#index) route in Express that returns all of your hardcoded cards.
+2. Create a .get() (#show) route in Express that returns one of your hardcoded cards based on ID.
+3. Create a .post() (#create) route in Express that adds a hardcoded card to your array of hardcoded cards.
 
-* add the class "glyphicon-ok" to the span with class "glyphicon" if the game is won
-* add the class "glyphicon-remove" to the span with class "glyphicon" if the game is lost
+### Step 4: Integrate Mongo/Mongoose
 
-### Step 5: Looking Good
+Now, we're going to set up our database.  Match up your Express routes with Mongoose methods so you can:
 
-The guesses on the page is kinda ugly. Let's fix it.
+1. Return all your cards.
+2. Return a single card based on ID.
+3. Save a single card to your database.
 
-* change the list of guesses to display using `ng-repeat`
-* improve the looks of anything else as desired
+### Step 5: CRUD All the Things!
 
-### Step 6: More User Stories (Bonus)
+OK, now we can GET and POST, but that's not very helpful for the user looking to create a *new* card, *update* a card, or *delete* one.  Let's build out that functionality:
 
-Accomplish the following features on your own or in a pair. User can...
+1. Build an HTML form that will allow us to submit a new card with our new POST method.  Since this is Angular, you will probably want to use `ng-submit`.  For help on this, you can look at the [Criminals Lab](https://github.com/den-wdi-1/http-lab).
+2. Add a button on each card that allows you to DELETE a card.  Again, the Criminals Lab should be helpful.
+3. Use a form that lets you edit and UPDATE a card.
 
-* enter an uppercase word that's treated as a lower case word
-* be challenged with a random word from a list of words
-* restart the game after win/lose
-* keep score of games won and lost
-* see a drawing of the hangman as the game progresses (extra bonus)
+### Step 6: Looking Good
+
+First, step back and appreciate the work you've just done.  You just built out a back-end for your app without any starter code!
+
+Pretty cool, right?!
+
+Now, how can we make this app better?
+
+### Step 7: Refactoring and Improvement (Bonus)
+
+Here are some things we can improve on this app...
+
+* Use $resource instead of $http
+* Update our cards in place with [angular-xeditable](https://vitalets.github.io/angular-xeditable/)
+* Refactor your app to fit Angular and Node best practices.  Remember the following:
+   * Keep code DRY
+   * [Principle of Single Responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle)
+   * [Angular Style Guide](https://github.com/den-wdi-1/angular-style-guide)
+* Use front-end routing with `ngRoute` where you don't want to refresh the page
 
