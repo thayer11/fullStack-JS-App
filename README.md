@@ -11,26 +11,30 @@ This lab is a chance to solidify what we learned earlier in the course about bac
       * Mongo and Mongoose to save our data
       * Express to route our resources
 
+At the end of this lab, we will have a full CRUD app using Javascript through the full stack.
+
 ## Setup
 
 1. Open up your Cards Against Assembly app (aka `angular-directives-lab`)
-2. Verify that the cards in questionsList in `cardsController.js` are rendering properly on the page.
+2. Verify that the cards in `questionsList` in `cardsController.js` are rendering properly on the page.
 3. It should look similar to this:
 
 <img width="965" alt="Custom Card" src="https://cloud.githubusercontent.com/assets/25366/9668827/a352dbf8-5238-11e5-8d00-80ccf02ca95c.png">
 
+> Note: We will give suggestions of specific projects/labs you have completed that will be useful for reference on specific steps.  For general reference, any of your labs from the Node week would be helpful, but the [Personal API Lab](https://github.com/den-wdi-1/express-personal-api) and [Tunely Lab](https://github.com/den-wdi-1/tunely) may have the most complete code.
+
 ### Step 1: Server Setup
 
 1. Create a directory for your node server.
+2. Initialize an npm project.
 2. Create a JS file that will act as your server file.
-3. Look back at your back-end labs for reference on how to build this first directory.
 4. Serve up your front-end files from this server, preferably in a `public` directory.
 
-For reference, you can examine any of your labs from the Node week, but the [Personal API Lab](https://github.com/den-wdi-1/express-personal-api) may have the most complete code.
+For reference, you can examine the [Express Lesson](https://github.com/den-wdi-1/express).
 
 ### Step 2: $http / AJAX Connection to Back-End
 
-1. Use the following Heroku endpoint to replace your hard-coded Cards: https://shielded-forest-41789.herokuapp.com/api/flashcards
+1. Use the following Heroku endpoint to replace your hard-coded Cards: `https://shielded-forest-41789.herokuapp.com/api/flashcards`
 2. Use `$http` to GET the flashcards.
 3. Use `$http` to GET one flashcard by ID.
 4. Use `$http` to POST a new flashcard.
@@ -79,11 +83,13 @@ Now, how can we make this app better?
 
 Here are some things we can improve on this app...
 
-* Use $resource instead of $http
-* Update our cards in place with [angular-xeditable](https://vitalets.github.io/angular-xeditable/)
 * Refactor your app to fit Angular and Node best practices.  Remember the following:
    * Keep code DRY
    * [Principle of Single Responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle)
    * [Angular Style Guide](https://github.com/den-wdi-1/angular-style-guide)
+* Use $resource instead of $http
+* Clean up the UI and CSS so you are proud of the appearance
+* Update our cards in place with [angular-xeditable](https://vitalets.github.io/angular-xeditable/)
 * Use front-end routing with `ngRoute` where you don't want to refresh the page
 * Use factories or services where possible
+* Split your back-end route, controller, and model code into separate files if you haven't already
