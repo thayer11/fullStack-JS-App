@@ -65,9 +65,11 @@ For reference, you can examine your work on the [Mongoose Books App](https://git
 
 OK, now we can GET and POST, but that's not very helpful for a user that is looking to *create* a *new* card, *update* a card, or *delete* one.  Let's build out that functionality:
 
-1. Build an HTML form that will allow us to submit a new card through our new POST route.  Since this is Angular, you will probably want to use `ng-submit`.  For help on this, you can look at the [Criminals Lab](https://github.com/den-wdi-1/http-lab).
-2. Add a button on each card that allows you to DELETE a card.  Again, the Criminals Lab should be helpful.
+1. Build an HTML form that will allow us to submit a new card through our new POST route.  Since this is Angular, you will probably want to use `ng-submit`.
+2. Add a button on each card that allows you to DELETE a card.
 3. Use a form that lets you edit and UPDATE a card.  Try to borrow as much as you can from your work with the form from #1.
+
+For reference, you can examine your work on the [Criminals Lab](https://github.com/den-wdi-1/http-lab).
 
 ### Step 6: Looking Good
 
